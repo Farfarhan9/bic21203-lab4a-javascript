@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="myElement"></div>
+    <label for="userInput">Enter a number:</label>
+    <input type="text" id="userInput" placeholder="Enter a number">
+</div>
+
+<button id="checkBtn" type="button">Check</button>
+<p id="result" role="status" aria-live="polite"></p>
+
+
+
+<script>
+    function checkInput() {
+        const userInput = document.getElementById("userInput").value;
+        const resultElement = document.querySelector("#result");
+        
+        if (userInput === "") {
+            resultElement.textContent = "Please enter a number.";
+            return;
+        }
+
+        const number = parseFloat(userInput);
+        
+        if (isNaN(number)) {
+            resultElement.textContent = "Please enter a valid number!";
+            return;
+        }
+
+        if (number > 10) {
+            resultElement.textContent = "The number is higher than 10.";
+        } else if (number < 10) {
+            resultElement.textContent = "The number is less than 10.";
+        } else {
+            resultElement.textContent = "The number is equal to 10";
+        }
+    }
+
+    document.getElementById("checkBtn").addEventListener("click", checkInput);
+</script>
+</body>
+</html>
