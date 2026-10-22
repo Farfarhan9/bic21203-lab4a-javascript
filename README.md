@@ -40,6 +40,7 @@ Higher than 10
 
 
 Lower than 10
+
 <img width="431" height="85" alt="image" src="https://github.com/user-attachments/assets/6b9a8095-be2d-4dd8-938f-e48ce499ff6b" />
 
 equal to 10
@@ -61,23 +62,37 @@ Decimal numbers
 
 **2) books.html :**
 - Brief Explanation :
-  Created a json object with a key named "books" and it's value is an array of 2 json objects which are book 1 and book 2
-  Both json objects inside the array contain the properties "title","author", "publicationYear" and "genres"
-  and each properties are filled with it's respective value based on the task lab 4b.
+  Created async funcion loadTitle()
+  Uses a try catch block to cover for error when json file failed to load
+  In the try block, book.json is fetch from Q1 folder inside the project root directory and then stored inside a const info variable. and then an if condition is used to check the status of info variable, if it fails to fetch an error is thrown.
+  And then the stored JSON object is parsed to javascript object (because javascript cannot read a JSON object directly) using .json() method.
+  Finally the info are displayed using appropriate property name to move throughout the nested JSON file. 
+  
 
 Screenshot : 
+
+<img width="593" height="171" alt="image" src="https://github.com/user-attachments/assets/85c2893e-d06c-4fcc-aa10-5b9c1513b680" />
+
 
 
 
 
 Question 3:
-**1) Interactive Text Changer :**
+**1) Dynamic Number Generator :**
 - Brief Explanation :
-  Created a javascript function named changMessage().
-  This functions change the text inside paragraph with and id = "message"
-  And then an addEventListener is added to a button with and id "changeBtn" that will activate on click and it will call the changeMessage() function
+  Created a javascript function named generateNumbers().
+  This functions add a list by using appendChild to the ordered list
+  A variable numberList is defined with the value of the order list with the id "numberList"
+  before a for loop that will add the items for the ordered list, the list is cleared using the innerHTML.
+  And then a for loop will execute 5 loops that will append the number to the list.
+  And then an addEventListener is added to a button with and id "generateBtn" that will activate on click and it will call the generateNumbers() function
 
 Screenshot :
+
+<img width="342" height="146" alt="image" src="https://github.com/user-attachments/assets/4eb1d85d-f76e-4c4d-8bec-f51f4fe29414" />
+
+<img width="347" height="268" alt="image" src="https://github.com/user-attachments/assets/aa4b200e-6d99-467d-9d42-beed63442fe6" />
+
 
 
 **2) jquery-dom.html :**
