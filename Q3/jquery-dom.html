@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3JSON</title>
+    <style>
+        .myStyle { background-color: coral; padding: 16px; }
+    </style>
+</head>
+<body>
+<script
+ src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"> </script>
+
+<h1>Native JavaScript VS jQuery</h1>
+
+<h2>Native JavaScript</h2>
+<div id="myElement">Original Text</div>
+<div id="myDIV"><p>I am a myDIV.</p></div>
+<button id="myButton">Click me</button>
+
+<h2>jQuery</h2>
+<div id="myElement2">Original Text</div>
+<div id="myDIV2"><p>I am a myDIV.</p></div>
+<button id="myButton2">Click me</button>
+
+
+
+
+<script>
+
+  document.getElementById("myElement").textContent = "Modified Text";
+  document.querySelector("#myDIV").classList.add("myStyle");
+  document.getElementById("myButton").addEventListener("click", () => alert("Button clicked!"));
+
+  $("#myElement2").text("Modified Text");
+  $("#myDIV2").addClass("myStyle");
+  $("#myButton2").click(() => alert("Button clicked!"));
+    
+    
+</script>
+</body>
+</html>
