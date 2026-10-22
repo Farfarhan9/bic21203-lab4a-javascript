@@ -4,7 +4,7 @@ Matric ID: AI240053
 Question 1:
 **1) Interactive Text Changer :**
 - Brief Explanation :
-- Created a javascript function named changMessage().
+- Created a javascript function named changeMessage().
 - This functions change the text inside paragraph with and id = "message"
 - And then an addEventListener is added to a button with and id "changeBtn" that will activate on click and it will call the changeMessage() function
 
@@ -81,11 +81,11 @@ Question 3:
 **1) Dynamic Number Generator :**
 - Brief Explanation :
   Created a javascript function named generateNumbers().
-  This functions add a list by using appendChild to the ordered list
-  A variable numberList is defined with the value of the order list with the id "numberList"
-  before a for loop that will add the items for the ordered list, the list is cleared using the innerHTML.
-  And then a for loop will execute 5 loops that will append the number to the list.
-  And then an addEventListener is added to a button with and id "generateBtn" that will activate on click and it will call the generateNumbers() function
+- This functions add a list by using appendChild to the ordered list
+- A variable numberList is defined with the value of the order list with the id "numberList"
+- Before a for loop that will add the items for the ordered list, the list is cleared using the innerHTML = "".
+- And then a for loop will execute 5 loops that will append the number to the list.
+- And then an addEventListener is added to a button with and id "generateBtn" that will activate on click and it will call the generateNumbers() function
 
 Screenshot :
 
