@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="myElement"></div>
+    <p id="loadJSONFirstAndSecond"></p>
+    <p id="loadJSONThird"></p>
+    <p id="loadJSONFinal"></p>
+</div>
+
+
+
+
+<script>
+    async function loadTitle() {
+    try {
+        const info = await fetch("../Q1/book.json");
+
+        if (!info.ok) {
+        throw new Error("HTTP error " + info.status);
+        }
+
+        const bookInfo = await info.json();
+
+        document.getElementById("loadJSONFirstAndSecond").textContent = "First book title: " + bookInfo.books[0].title 
+        + ", Second book's author : " + bookInfo.books[1].author;
+
+        document.getElementById("loadJSONThird").textContent = "First book: " + bookInfo.books[0].title + ", Genres: " + bookInfo.books[0].genres ;
+
+        document.getElementById("loadJSONFinal").textContent = "Second book: " + bookInfo.books[1].title + ", Genres: " + bookInfo.books[1].genres ;
+
+
+    }
+    catch(err) {
+        console.error(err);
+        const message = "Sorry, we couldn't load the book data. Please try again later. ";
+        document.getElementById("loadJSONFirstAndSecond").textContent = message;
+        document.getElementById("loadJSONThird").textContent = message;
+        document.getElementById("loadJSONFinal").textContent = message;
+    }
+    }
+
+    loadTitle()
+</script>
+</body>
+</html>
